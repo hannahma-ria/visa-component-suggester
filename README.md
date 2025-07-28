@@ -23,9 +23,11 @@ Live Demo Here -> https://visa-component-suggester-lac.vercel.app
 -  Matches relevant Nova components
 -  Generates example code snippets using those components
 -  Saves recent queries to `localStorage` (can reselect from dropdown)
--  One-click "Copy to Clipboard"
+-  Prototyped "real" agent/assistant
 -  Intro tour for new users
+-  One-click "Copy to Clipboard"
 -  Accessible with keyboard navigation + screen reader support
+- Demonstrated use of WCAG standards
 
 ---
 
