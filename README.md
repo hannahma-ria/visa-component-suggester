@@ -67,7 +67,7 @@ Recent queries are saved in `localStorage` so users can quickly reuse them.
 - Hook into a mock API for component metadata
 - Let users save snippets to the cloud
 - Turn the assistant into a floating chat bubble with richer guidance
-- Improve the layout
+- Improve the layout and test designs with wireframes
 
 ---
 
