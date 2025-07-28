@@ -1,3 +1,4 @@
+// Maps keywords to UI components
 export const componentMap: Record<string, string[]> = {
   login: ['Input', 'Button'],
   form: ['Label', 'Input', 'Button'],

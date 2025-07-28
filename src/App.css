@@ -1,21 +1,26 @@
 .app {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  gap: 1.5rem;
 }
 
 textarea {
   width: 100%;
   height: 100px;
+  max-height: 300px;
   padding: 0.75rem;
   margin-bottom: 1rem;
   font-size: 1rem;
+  resize: vertical;
+  border-radius: 5px;
 }
 
 button {
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
+  background: #1434cb;
 }
 
 pre {
@@ -24,3 +29,109 @@ pre {
   padding: 1rem;
   overflow-x: auto;
 }
+
+h1 {
+  font-size: 2.5rem;
+  color: #1434cb;
+}
+
+  .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+  .logo {
+  width: 100px;
+  height: auto;
+  padding: 2rem;
+}
+
+.assistant-toggle-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: #1434cb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.agent-ui {
+  position: fixed;
+  top: 80px;
+  right: 16px;
+  z-index: 999;
+  width: 280px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agent-ui h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.agent-ui p {
+  font-size: 14px;
+  color: #555;
+}
+
+.select{
+  /*margin: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px; */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.results {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.results h2 {
+  margin-top: 0;
+  color: #1434cb;
+  font-size: 1.2rem;
+}
+
+.results ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+

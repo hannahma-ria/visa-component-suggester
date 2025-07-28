@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# DevSuggest – Natural Language → Component Suggestion Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a lightweight React app that lets developers describe a UI in plain English and instantly get:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Suggested components from the Visa Product Design System
+- An auto-generated code snippet using those components
 
-## Expanding the ESLint configuration
+The goal was to create a fast, intuitive experience that makes it easier to go from idea to usable UI code.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+🔗 [Live Demo Here](https://your-vercel-link.com)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-  Accepts natural language input from the developer
+-  Matches relevant Nova components
+-  Generates example code snippets using those components
+-  Saves recent queries to `localStorage` (can reselect from dropdown)
+-  One-click "Copy to Clipboard"
+-  Intro tour for new users
+-  Accessible with keyboard navigation + screen reader support
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## How It Works
+
+The logic is rule-based and kept simple:
+
+1. User enters a prompt (ex: “login form with email and password”)
+2. The app checks for keywords using a basic mapping
+3. Matched components are shown + a code snippet is generated from templates
+4. The user can copy the snippet or try another prompt
+
+Recent queries are saved in `localStorage` so users can quickly reuse them.
+
+---
+
+## Technical Stack
+
+- React + TypeScript
+- CSS for layout + styling
+- LocalStorage to simulate persistence
+- Vite for bundling (locally)
+- Deployed on Vercel
+
+---
+
+## Assumptions / Shortcuts
+
+- Component matching is based on a static `componentMap.ts`
+- I used placeholders for Nova components like `<Input />`, `<Label />`, etc.
+- No real API used, saved queries are handled in the frontend only
+- Didn’t implement live preview of the UI, but it’s something I’d love to explore
+
+---
+
+## With More Time, I’d...
+
+- Add live rendering of the suggested UI
+- Hook into a mock API for component metadata
+- Let users save snippets to the cloud
+- Turn the assistant into a floating chat bubble with richer guidance
+- Improve the layout
+
+---
+
+## How I Used AI
+
+I used ChatGPT for brainstorming ideas and structure at the beginning.
+
+All decisions, logic, and implementation were still mine, AI was just a tool to speed things up.
+
